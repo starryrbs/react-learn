@@ -1,12 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import ReactDom from 'react-dom'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// const app = <h1>Welcome React</h1>;
+
+// const createApp = (props) => {
+//     return <div>
+//         {/*大三大四*/}
+//         <h1>Welcome {props.title}</h1>
+//     </div>;
+// };
+//
+// const app = createApp({
+//     title: ' React 16.8'
+// });
+
+const App = (props) => {
+    return <div>
+        <h1>Welcome {props.title}</h1>
+    </div>;
+};
+
+
+ReactDom.render(
+    <App title="标题"/>,
+    document.querySelector('#root')
+);
