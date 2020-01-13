@@ -1,28 +1,22 @@
 import React from 'react'
+import {render} from 'react-dom'
 
-import ReactDom from 'react-dom'
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>类组件</h1>
+                <p>{this.props.desc}</p>
+            </div>
+        )
+    }
 
-// const app = <h1>Welcome React</h1>;
+}
 
-// const createApp = (props) => {
-//     return <div>
-//         {/*大三大四*/}
-//         <h1>Welcome {props.title}</h1>
-//     </div>;
-// };
-//
-// const app = createApp({
-//     title: ' React 16.8'
-// });
+const app = new App({
+    desc: '我是类组件'
+}).render();
 
-const App = (props) => {
-    return <div>
-        <h1>Welcome {props.title}</h1>
-    </div>;
-};
+render(app, document.querySelector('#root'));
 
 
-ReactDom.render(
-    <App title="标题"/>,
-    document.querySelector('#root')
-);
