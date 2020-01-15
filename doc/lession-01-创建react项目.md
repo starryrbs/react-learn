@@ -88,9 +88,14 @@
       const app = createApp({
           title: ' React 16.8'
       });
+      ReactDom.render(
+                app,
+                document.querySelector('#root')
+      );
+
       ```
 
-    - **要在 jsx 里面写 js 加一个`{}`就可以了**
+    - **要在 jsx 里面写 js 只需要加一个`{}`就可以了**
 
       > **注释也是加一层 `{}`**
 
